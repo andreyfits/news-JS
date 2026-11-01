@@ -10,7 +10,7 @@ class Sources implements Drawable<SourceItem> {
             const sourceClone: DocumentFragment = cloneTemplate('#sourceItemTemp');
 
             getElement<HTMLSpanElement>('.source__item-name', sourceClone).textContent = item.name;
-            getElement<HTMLDivElement>('.source__item', sourceClone).setAttribute('data-source-id', item.id);
+            getElement<HTMLButtonElement>('.source__item', sourceClone).setAttribute('data-source-id', item.id);
 
             fragment.append(sourceClone);
         });
