@@ -7,12 +7,17 @@ News portal built with **TypeScript** and **Webpack** on top of [News API](https
 
 ## Tech stack
 
-- TypeScript 5 with `strict` and `noImplicitAny` enabled (see `tsconfig.json`)
+- TypeScript 6 with `strict` and `noImplicitAny` enabled (see `tsconfig.json`)
 - Webpack 5 with `ts-loader`, `copy-webpack-plugin` and `dotenv-webpack`
-- ESLint with `typescript-eslint` (`recommended-type-checked`, `no-explicit-any` is an error) and Prettier
+- ESLint 10 (flat config in `eslint.config.js`) with `typescript-eslint` (`recommendedTypeChecked`, `no-explicit-any` is an error) and Prettier
 - Plain CSS: grid layout and fluid typography, works from `320px` to `1920px`
 
+> **Why not TypeScript 7?** `typescript-eslint` supports TypeScript `<6.1` and `ts-loader` needs the JavaScript compiler API,
+> which the native TypeScript 7 package does not provide. TypeScript stays on the latest 6.x release.
+
 ## Getting started
+
+Requires Node.js 22.15 or newer (`webpack-dev-server` 6 and ESLint 10).
 
 1. Install dependencies: `npm install`
 2. Copy `.env.example` to `.env` and set the variables:

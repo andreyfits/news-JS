@@ -19,6 +19,9 @@
     "author": "Aleh Serhiyenia",
     "license": "ISC",
     "homepage": "https://andreyfits.github.io/news-JS/",
+    "engines": {
+        "node": ">=22.15.0"
+    },
     "devDependencies": {
         "@eslint/js": "^10.0.1",
         "clean-webpack-plugin": "^4.0.0",
