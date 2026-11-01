@@ -13,9 +13,8 @@ class News implements Drawable<NewsItem> {
         news.forEach((item: NewsItem): void => {
             const newsClone: DocumentFragment = cloneTemplate('#newsItemTemp');
 
-            getElement<HTMLDivElement>('.news__meta-photo', newsClone).style.backgroundImage = `url(${
-                item.urlToImage || PLACEHOLDER_IMAGE
-            })`;
+            getElement<HTMLDivElement>('.news__meta-photo', newsClone).style.backgroundImage =
+                `url(${item.urlToImage || PLACEHOLDER_IMAGE}), url(${PLACEHOLDER_IMAGE})`;
             getElement<HTMLLIElement>('.news__meta-author', newsClone).textContent = item.author || item.source.name;
             getElement<HTMLLIElement>('.news__meta-date', newsClone).textContent = item.publishedAt
                 .slice(0, 10)
