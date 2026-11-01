@@ -3,7 +3,7 @@ import { Drawable, NewsItem } from '../../../types';
 import { cloneTemplate, getElement } from '../../../utils/dom';
 
 const MAX_NEWS_COUNT: number = 10;
-const PLACEHOLDER_IMAGE: string = 'img/news_placeholder.jpg';
+const PLACEHOLDER_IMAGE: string = 'img/news_placeholder.svg';
 
 class News implements Drawable<NewsItem> {
     public draw(data: readonly NewsItem[]): void {
