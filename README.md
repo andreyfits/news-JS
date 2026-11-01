@@ -39,9 +39,15 @@ Requires Node.js 22.15 or newer (`webpack-dev-server` 6 and ESLint 10).
 | ------------------- | -------------------------------------------------- |
 | `npm start`         | run the dev server                                 |
 | `npm run build`     | production build into `dist/`                      |
-| `npm run lint`      | run ESLint for `*.ts` files                        |
+| `npm run lint`      | run ESLint (type-checked rules for `*.ts` files)   |
 | `npm run typecheck` | run the TypeScript compiler without emitting files |
 | `npm run deploy`    | build and publish `dist/` to the `gh-pages` branch |
+
+## Deployment
+
+The demo is published to the `gh-pages` branch with `npm run deploy`. It is built against the proxy mocks
+(`API_URL=https://rss-news-api.onrender.com/mocks/`), so no API key ends up in the public bundle and every source
+shows the same static articles.
 
 ## Project structure
 
