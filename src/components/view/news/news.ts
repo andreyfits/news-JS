@@ -10,10 +10,8 @@ class News implements Drawable<NewsItem> {
         const news: readonly NewsItem[] = data.slice(0, MAX_NEWS_COUNT);
         const fragment: DocumentFragment = document.createDocumentFragment();
 
-        news.forEach((item: NewsItem, idx: number): void => {
+        news.forEach((item: NewsItem): void => {
             const newsClone: DocumentFragment = cloneTemplate('#newsItemTemp');
-
-            if (idx % 2) getElement<HTMLDivElement>('.news__item', newsClone).classList.add('alt');
 
             getElement<HTMLDivElement>('.news__meta-photo', newsClone).style.backgroundImage = `url(${
                 item.urlToImage || PLACEHOLDER_IMAGE
